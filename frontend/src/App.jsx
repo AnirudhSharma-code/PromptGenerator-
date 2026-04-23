@@ -22,7 +22,7 @@ function App() {
   const fetchCategories = async () => {
     try {
       // const response = await axios.get("https://promt-generator-dfp6.vercel.app/api/categories");
-       const response = await axios.get("http://localhost:5000/api/posts");
+       const response = await axios.get(" https://promptgenerator-uz7j.onrender.com/api/posts");
       if (response.data.success) {
         setCategories(response.data.data);
       }
@@ -55,7 +55,7 @@ function App() {
       if (categoryId) formData.append("category_id", categoryId);
 
       const response = await axios.post(
-        "https://promt-generator-dfp6.vercel.app/api/posts",
+        " https://promptgenerator-uz7j.onrender.com/api/posts",
         formData,
         {
           headers: {
