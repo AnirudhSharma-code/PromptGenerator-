@@ -56,7 +56,6 @@ app.use((err, req, res, next) => {
 
 // ✅ Conditional server start - ONLY for local development
 // Vercel will handle the server itself in production
-if (process.env.NODE_ENV !== "production") {
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => {
     console.log(`\n=================================`);
@@ -67,7 +66,6 @@ if (process.env.NODE_ENV !== "production") {
     console.log(`🔍 DB Status: http://localhost:${PORT}/db-status`);
     console.log(`=================================\n`);
   });
-}
 
 // ✅ Export for Vercel (always needed)
 export default app;
